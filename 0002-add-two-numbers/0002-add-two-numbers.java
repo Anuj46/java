@@ -13,7 +13,7 @@ class Solution {
         ListNode ans = new ListNode(); 
         ListNode temp = ans;  
         int carry = 0;
-        while(list1!=null || list2!=null || carry!= 0){ 
+        while(list1!=null || list2!=null || carry != 0){ 
             int sum=0;
             if(list1!=null){
                 sum+=list1.val;
@@ -23,7 +23,7 @@ class Solution {
                 sum+=list2.val;
                 list2 = list2.next;
             }
-            sum+=carry;  
+            sum= sum + carry;  
             carry=sum/10;  
 
             ListNode ll = new ListNode(sum%10);  
